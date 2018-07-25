@@ -1,6 +1,6 @@
 applications:
 - path: build/libs/micro-catalog-0.0.1.war
-  memory: 512M
+  memory: 256M
   instances: 1
   domain: mybluemix.net
   name: catalog-<suffix>
