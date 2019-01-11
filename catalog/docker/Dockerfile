@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
-ADD app.jar app.jar
 RUN bash -c 'touch /app.jar'
+ADD app.jar app.jar
 
 # Install prereq
 RUN apk --no-cache update && apk add jq bash bc
