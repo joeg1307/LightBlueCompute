@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: customer
-          image: "registry.ng.bluemix.net/<namespace>/customer:latest"
+          image: "us.icr.io/<namespace>/customer:latest"
           imagePullPolicy: Always
           volumeMounts:
           - mountPath: /var/run/secrets/binding-refarch-cloudantdb
