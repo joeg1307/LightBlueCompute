@@ -1,4 +1,4 @@
-# BobbyCompute
+# LightBlueCompute
 
 This repository contains the code to implement Enablement sample reference application. The application is loosely based on the BlueCompute R3 application in `https://github.com/ibm-cloud-architecture/refarch-cloudnative`. However, instead of showing off the latest and greatest facility of Bluemix, the purpose of this application is for people to learn developing application in Bluemix. 
 
