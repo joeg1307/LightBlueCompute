@@ -4,9 +4,9 @@ metadata:
   name: mysql-lightblue-deployment
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: mysql
+  selector:
+    matchLabels:
+      app: mysql
   template:
     metadata:
       name: pod-mysql

@@ -5,8 +5,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: customer
+    matchLabels:
+      app: customer
   template:
     metadata:
       name: pod-customer
