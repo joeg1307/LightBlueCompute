@@ -12,6 +12,9 @@ var _myApp = config.get('Application');
 var _apiServer = config.get('API-Server');
 var _apis = config.get('APIs');
 
+const HOST_CUSTOMER = process.env.HOST_CUSTOMER || _apis.customer.host
+_apis.customer.host = HOST_CUSTOMER;
+
 /* GET Catalog listing from API and return JSON */
 router.get('/', function (req, res) {
   session = req.session;

@@ -12,6 +12,8 @@ var _myApp = config.get('Application');
 var _apiServer = config.get('API-Server');
 var _apis = config.get('APIs');
 
+const HOST_CATALOG = process.env.HOST_CATALOG || _apis.catalog.host
+_apis.catalog.host=HOST_CATALOG;
 
 /* Return application configuration to client */
 router.get('/config', function (req, res) {
