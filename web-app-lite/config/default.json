@@ -13,7 +13,7 @@
   "APIs": {
     "catalog": {
       "host": "cataloghost",
-      "base_path": "/api",
+      "base_path": "/micro",
       "require": [
           "client_id"
       ]
@@ -28,7 +28,7 @@
     },
     "customer": {
       "host": "customerhost",
-      "base_path": "/api",
+      "base_path": "/micro",
       "require": [
         "client_id"
       ]

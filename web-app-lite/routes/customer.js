@@ -17,6 +17,8 @@ _apis.customer.host = HOST_CUSTOMER;
 
 /* GET Catalog listing from API and return JSON */
 router.get('/', function (req, res) {
+  console.log(`process.env.HOST_CUSTOMER..${process.env.HOST_CUSTOMER}`);
+  console.log(`GETTING CUSTOMERS from..${_apis.customer.host }`);
   session = req.session;
 
   //page_filter = (typeof req.query.filter !== 'undefined') ? JSON.stringify(req.query.filter.order) : false;
@@ -34,9 +36,11 @@ router.get('/', function (req, res) {
 function setGetCustomerOptions(req, res) {
   var query = req.query;
 
+  var host = process.env.HOST_CUSTOMER || _apis.customer.host
+  console.log(`using host:${host}`);
   var customer_url = api_url.stringify({
     protocol: _apiServer.protocol,
-    host: _apis.customer.host,
+    host: host,
     api: _apis.customer.base_path,
     operation: "customer/search?username=foo"
   });

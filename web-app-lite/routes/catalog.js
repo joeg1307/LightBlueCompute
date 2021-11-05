@@ -28,6 +28,8 @@ router.get('/config', function (req, res) {
 router.get('/', function (req, res) {
   session = req.session;
 
+  console.log(`process.env.HOST_CATALOG..${process.env.HOST_CATALOG}`);
+  console.log(`GETTING CATALOG from..${_apis.catalog.host }`);
   //page_filter = (typeof req.query.filter !== 'undefined') ? JSON.stringify(req.query.filter.order) : false;
   page_filter = "";
 
@@ -53,10 +55,11 @@ router.get('/:id', function (req, res) {
 
 function setGetItemsOptions(req, res) {
   var query = req.query;
-
+  var host = process.env.HOST_CATALOG || _apis.catalog.host
+  console.log(`using host:${host}`);
   var items_url = api_url.stringify({
     protocol: _apiServer.protocol,
-    host: _apis.catalog.host,
+    host: host,
     api: _apis.catalog.base_path,
     operation: "items"
   });
